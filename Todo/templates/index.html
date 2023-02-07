@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block title %}{% endblock title %}
+
+
+{% block content %}
+<h2>TODO list:</h2>
+   {% if user.is_authenticated %}
+    {% for task in user_tasks %}
+        <p>{{task.title}}
+        {% endfor %}
+    {% endif %}
+{% endblock content %}
