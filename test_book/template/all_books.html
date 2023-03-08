@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+
+
+{% block content %}
+<ul>{% for authors in authors %}</ul><br>
+     <img src="{{authors.photo.url}}"
+       height="70"
+       width="70"
+       alt="...">
+
+<li>{{ authors.name }}</li>
+        {{authors.biography|truncatewords:10}}
+  {% endfor %}
+{% endblock content %}

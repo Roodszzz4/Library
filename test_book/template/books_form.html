@@ -1,0 +1,6 @@
+<form method="post" enctype="multipart/form-data" action="{% url 'add_books' %}">
+  {% csrf_token %}
+  {{form.as_p}}
+
+  <button type="submit">Ok</button>
+</form>
